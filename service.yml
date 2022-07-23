@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: Publish
+spec:
+  selector:
+    name: web
+  type: Nodeport
+  ports:
+    - name: http
+      prot: 80
+      targetPort: 80
+      nodePort: 30003
+      protocol: tcp
